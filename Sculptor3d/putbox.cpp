@@ -1,5 +1,7 @@
 #include "putbox.h"
 
+
+/*=====Implementação da subclasse PutBox=====*/
 PutBox::PutBox(int x0, int x1, int y0, int y1, int z0, int z1, float r, float g, float b, float a) {
 
     this -> x0 = x0;
@@ -14,26 +16,17 @@ PutBox::PutBox(int x0, int x1, int y0, int y1, int z0, int z1, float r, float g,
     this -> a = a;
 }
 
-PutBox::~PutBox() {
-
-}
+PutBox::~PutBox() {}
 
 void PutBox::draw(Sculptor &s) {
 
-    int i;
-    int j;
-    int k;
-
     s.setColor(r, g, b, a);
 
-    for (i = x0; i < x1; i++) {
-
-        for (j = y0; j < y1; j++) {
-
-            for (k = z0; k < z1; k++) {
-
+    for (int i = x0; i < x1; i++) {
+        for (int j = y0; j < y1; j++) {
+            for (int k = z0; k < z1; k++) {
                 s.putVoxel(i, j, k);
             }
         }
     }
-} //draw irá passar como argumento o que foi atribuído pelo construtor, nos atributos da classe herdeira, para os parâmetros dos métodos de sculptor
+}

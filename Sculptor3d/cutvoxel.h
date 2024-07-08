@@ -2,17 +2,15 @@
 #define CUTVOXEL_H
 #include "figurageometrica.h"
 #include "sculptor.h"
-
-class CutVoxel : public FiguraGeometrica{
+/*=====Declaração da subclasse CutVoxel=====*/
+class CutVoxel : public FiguraGeometrica{ //Herdeira de FiguraGeometrica
 private:
-    int x;
-    int y;
-    int z;
+    int x, y, z;
 
 public:
-    CutVoxel(int x, int y, int z);
-    ~CutVoxel();
-    void draw(Sculptor &s);
+    CutVoxel(int x, int y, int z); //construtor da subclasse
+    ~CutVoxel(); //Destruidor da subclasse
+    void draw(Sculptor &s); //método draw com referencia para objeto da classe Sculptor
 };
 
 #endif

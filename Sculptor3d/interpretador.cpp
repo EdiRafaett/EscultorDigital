@@ -10,7 +10,6 @@
 #include "cutsphere.h"
 #include "putellipsoid.h"
 #include "cutellipsoid.h"
-#include "putplanet.h"
 
 using namespace std;
 
@@ -52,9 +51,7 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("PutVoxel")==0) {
 
-                    int x;
-                    int y;
-                    int z;
+                    int x, y, z;
 
                     ss >> x >> y >> z >> r >> g >> b >> a; //conecta uma string do arquivo a uma variável em memória
 
@@ -63,9 +60,7 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("CutVoxel")==0) {
 
-                    int x;
-                    int y;
-                    int z;
+                    int x, y, z;
 
                     ss >> x >> y >> z;
 
@@ -74,12 +69,7 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("PutBox")==0) {
 
-                    int x0;
-                    int x1;
-                    int y0;
-                    int y1;
-                    int z0;
-                    int z1;
+                    int x0, x1, y0, y1, z0, z1;
 
                     ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a;
 
@@ -88,12 +78,7 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("CutBox")==0) {
 
-                    int x0;
-                    int x1;
-                    int y0;
-                    int y1;
-                    int z0;
-                    int z1;
+                    int x0, x1, y0, y1, z0, z1;
 
                     ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1;
 
@@ -102,10 +87,7 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("PutSphere")==0) {
 
-                    int xc;
-                    int yc;
-                    int zc;
-                    int raio;
+                    int xc, yc, zc, raio;
 
                     ss >> xc >> yc >> zc >> raio >> r >> g >> b >> a;
 
@@ -114,51 +96,17 @@ vector<FiguraGeometrica*> Interpretador::analise(string filename) {
 
                 else if(token.compare("CutSphere")==0) {
 
-                    int xc;
-                    int yc;
-                    int zc;
-                    int raio;
+                    int xc, yc, zc, raio;
 
                     ss >> xc >> yc >> zc >> raio;
 
                     figs.push_back(new CutSphere(xc, yc, zc, raio));
                 }
 
-                //putplanet
-                else if(token.compare("PutPlanet")==0) {
-
-                    int xc;
-                    int yc;
-                    int zc;
-                    int raio;
-                    std::string caminhoimg;
-
-                    ss >> xc >> yc >> zc >> raio >> caminhoimg;
-
-                    figs.push_back(new PutPlanet(xc, yc, zc, raio, caminhoimg));
-                }
-                else if(token.compare("PutEllipsoid")==0) {
-
-                    int xc;
-                    int yc;
-                    int zc;
-                    int raiox;
-                    int raioy;
-                    int raioz;
-
-                    ss >> xc >> yc >> zc >> raiox >> raioy >> raioz >> r >> g >> b >> a;
-
-                    figs.push_back(new PutEllipsoid(xc, yc, zc, raiox, raioy, raioz, r, g, b, a));
-                }
 
                 else if(token.compare("CutEllipsoid")==0) {
 
-                    int xc;
-                    int yc;
-                    int zc;
-                    int raiox;
-                    int raioy;
-                    int raioz;
+                    int xc, yc, zc, raiox, raioy, raioz;
 
                     ss >> xc >> yc >> zc >> raiox >> raioy >> raioz;
 

@@ -1,6 +1,7 @@
 #include "cutellipsoid.h"
 #include <cmath>
 
+/*=====Implementação da subclasse CutEllipsoid=====*/
 CutEllipsoid::CutEllipsoid(int xcenter, int ycenter, int zcenter, int raiox, int raioy, int raioz) {
 
     this -> xcenter = xcenter;
@@ -12,27 +13,17 @@ CutEllipsoid::CutEllipsoid(int xcenter, int ycenter, int zcenter, int raiox, int
 
 }
 
-CutEllipsoid::~CutEllipsoid() {
-
-}
+CutEllipsoid::~CutEllipsoid() {}
 
 void CutEllipsoid::draw(Sculptor &s) {
 
-    int i;
-    int j;
-    int k;
-
-    for (i = 0; i < raiox; i++) {
-
-        for (j = 0; j < raioy; j++) {
-
-            for (k = 0; k < raioz; k++) {
-
+    for (int i = 0; i < raiox; i++) {
+        for (int j = 0; j < raioy; j++) {
+            for (int k = 0; k < raioz; k++) {
                 if ((pow(i - xcenter, 2) / pow(raiox, 2)) + (pow(j - ycenter, 2) / pow(raioy, 2)) + (pow(k - zcenter, 2) / pow(raioz, 2)) <= 1) {
-
                     s.cutVoxel(i, j, k);
                 }
             }
         }
     }
-} //draw irá passar como argumento o que foi atribuído pelo construtor, nos atributos da classe herdeira, para os parâmetros dos métodos de sculptor
+}

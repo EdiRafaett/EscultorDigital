@@ -16,7 +16,6 @@ SOURCES += \
         main.cpp \
         putbox.cpp \
         putellipsoid.cpp \
-        putplanet.cpp \
         putsphere.cpp \
         putvoxel.cpp \
         sculptor.cpp
@@ -30,7 +29,6 @@ HEADERS += \
     interpretador.h \
     putbox.h \
     putellipsoid.h \
-    putplanet.h \
     putsphere.h \
     putvoxel.h \
     sculptor.h \

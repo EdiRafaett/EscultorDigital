@@ -1,5 +1,7 @@
 #include "cutvoxel.h"
 
+
+/*=====Implementação da subclasse CutVoxel=====*/
 CutVoxel::CutVoxel(int x, int y, int z) {
 
     this -> x = x;
@@ -7,9 +9,7 @@ CutVoxel::CutVoxel(int x, int y, int z) {
     this -> z = z;
 }
 
-CutVoxel::~CutVoxel() {
-
-}
+CutVoxel::~CutVoxel() {}
 
 void CutVoxel::draw(Sculptor &s) {
 

@@ -7,7 +7,7 @@
 #include "cutbox.h"
 #include "cutvoxel.h"
 #include "putsphere.h"
-#include "putplanet.h"
+
 
 using namespace std;
 

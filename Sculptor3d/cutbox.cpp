@@ -1,5 +1,6 @@
 #include "cutbox.h"
 
+/*=====Implementação da subclasse CutBox=====*/
 CutBox::CutBox(int x0, int x1, int y0, int y1, int z0, int z1) {
 
     this -> x0 = x0;
@@ -10,24 +11,15 @@ CutBox::CutBox(int x0, int x1, int y0, int y1, int z0, int z1) {
     this -> z1 = z1;
 }
 
-CutBox::~CutBox() {
-
-}
+CutBox::~CutBox() {}
 
 void CutBox::draw(Sculptor &s) {
 
-    int i;
-    int j;
-    int k;
-
-    for (i = x0; i < x1; i++) {
-
-        for (j = y0; j < y1; j++) {
-
-            for (k = z0; k < z1; k++) {
-
+    for (int i = x0; i < x1; i++) {
+        for (int j = y0; j < y1; j++) {
+            for (int k = z0; k < z1; k++) {
                 s.cutVoxel(i, j, k);
             }
         }
     }
-} //draw irá passar como argumento o que foi atribuído pelo construtor, nos atributos da classe herdeira, para os parâmetros dos métodos de sculptor
+}

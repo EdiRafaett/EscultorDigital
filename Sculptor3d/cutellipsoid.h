@@ -3,19 +3,17 @@
 #include "figurageometrica.h"
 #include "sculptor.h"
 
-class CutEllipsoid : public FiguraGeometrica{
+/*=====Declaração da subclasse CutEllipsoid=====*/
+class CutEllipsoid : public FiguraGeometrica{ //Herdeira de FiguraGeometrica
+
 private:
-    int xcenter;
-    int ycenter;
-    int zcenter;
-    int raiox;
-    int raioy;
-    int raioz;
+    int xcenter, ycenter, zcenter, raiox, raioy, raioz;
 
 public:
-    CutEllipsoid(int xcenter, int ycenter, int zcenter, int raiox, int raioy, int raioz);
-    ~CutEllipsoid();
-    void draw(Sculptor &s);
+    CutEllipsoid(int xcenter, int ycenter, int zcenter,
+                 int raiox, int raioy, int raioz); //Construtor da subclasse
+    ~CutEllipsoid(); //Destruidor da subclasse
+    void draw(Sculptor &s); //Método draw com referencia para objeto da classe Sculptor
 };
 
 #endif

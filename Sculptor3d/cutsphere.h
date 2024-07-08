@@ -3,17 +3,16 @@
 #include "figurageometrica.h"
 #include "sculptor.h"
 
-class CutSphere : public FiguraGeometrica{
+/*=====Declaração da subclasse CutSphere:=====*/
+class CutSphere : public FiguraGeometrica{ //Herdeira de FiguraGeometrica
+
 private:
-    int xcenter;
-    int ycenter;
-    int zcenter;
-    int raio;
+    int xcenter, ycenter, zcenter, raio;
 
 public:
-    CutSphere(int xcenter, int ycenter, int zcenter, int raio);
-    ~CutSphere();
-    void draw(Sculptor &s);
+    CutSphere(int xcenter, int ycenter, int zcenter, int raio); //Construtor da subclasse
+    ~CutSphere(); //Destruidor da subclasse
+    void draw(Sculptor &s); //método draw com referencia para objeto da classe Sculptor
 };
 
 #endif

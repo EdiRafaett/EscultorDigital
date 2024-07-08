@@ -1,6 +1,8 @@
 #include "cutsphere.h"
 #include <cmath>
 
+
+/*=====Implementação da subclasse CutSphere=====*/
 CutSphere::CutSphere(int xcenter, int ycenter, int zcenter, int raio) {
 
     this -> xcenter = xcenter;
@@ -10,9 +12,7 @@ CutSphere::CutSphere(int xcenter, int ycenter, int zcenter, int raio) {
 
 }
 
-CutSphere::~CutSphere() {
-
-}
+CutSphere::~CutSphere() {}
 
 void CutSphere::draw(Sculptor &s) {
     for (int i = xcenter - raio; i <= xcenter + raio; i++) {
@@ -25,4 +25,3 @@ void CutSphere::draw(Sculptor &s) {
         }
     }
 }
- //draw irá passar como argumento o que foi atribuído pelo construtor, nos atributos da classe herdeira, para os parâmetros dos métodos de sculptor
