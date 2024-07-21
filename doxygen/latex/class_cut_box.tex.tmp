@@ -1,0 +1,26 @@
+\hypertarget{class_cut_box}{}\doxysection{Cut\+Box Class Reference}
+\label{class_cut_box}\index{CutBox@{CutBox}}
+
+
+Inheritance diagram for Cut\+Box\+:
+% FIG 0
+
+
+Collaboration diagram for Cut\+Box\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cut_box_a0e7e856f22e31926719bef5a69685051}\label{class_cut_box_a0e7e856f22e31926719bef5a69685051}} 
+{\bfseries Cut\+Box} (int x0, int x1, int y0, int y1, int z0, int z1)
+\item 
+\mbox{\Hypertarget{class_cut_box_a95d16d1e3164807a1f006614b753e205}\label{class_cut_box_a95d16d1e3164807a1f006614b753e205}} 
+void {\bfseries draw} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cutbox.\+h\item 
+cutbox.\+cpp\end{DoxyCompactItemize}
