@@ -1,7 +1,7 @@
 #ifndef SCULPTOR_H
 #define SCULPTOR_H
 #include "voxel.h"
-#include <opencv2/opencv.hpp>
+
 
 /*=====Declaração da classe Sculptor (escultor da classe):=====*/
 class Sculptor {
